@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>加加减减</title>
+  </head>
+  <body>
+    <button id="jiahaoanniu" onclick="jiayi()">加</button>
+    <button id="shuzixianshi" onclick="jisuanzhi()">0</button>
+    <button id="jianhaoanniu" onclick="jianyi()">减</button>
+    <div>点击数字可归零</div>
+    <script>
+      function jiayi() {
+        let jiahaobiaoqian = window.document.getElementById("jiahaoanniu"); //获取按钮id
+        let hebiaoqian = window.document.getElementById("shuzixianshi");
+        let jia = parseInt(hebiaoqian.innerText); //数据转换为整数
+        let xinshuzi = jia + 1; //加1
+        hebiaoqian.innerText = xinshuzi;
+        return;
+      }
+      function jianyi() {
+        let jianhaobiaoqian = window.document.getElementById("jianhaoanniu");
+        let hebiaoqian = window.document.getElementById("shuzixianshi");
+        let jian = parseInt(hebiaoqian.innerText);
+        let xinshuzi = jian - 1;
+        hebiaoqian.innerText = xinshuzi;
+        return;
+      }
+      function jisuanzhi() {
+        let hebiaoqian = window.document.getElementById("shuzixianshi");
+        let zonghe = parseInt(hebiaoqian.innerText);
+        let xinshuzi = zonghe * 0;
+        hebiaoqian.innerText = xinshuzi;
+        return;
+      }
+
+      //先得到按钮ID 把按钮里的文字转换成数字(整数)，然后+点击次数，最后把计算结果赋予按钮里内容
+    </script>
+  </body>
+</html>
